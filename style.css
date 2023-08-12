@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*background-color: rgb(225, 223, 225);*/
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1660' height='963' preserveAspectRatio='none' viewBox='0 0 1660 963'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1218%26quot%3b)' fill='none'%3e%3crect width='1660' height='963' x='0' y='0' fill='url(%23SvgjsLinearGradient1219)'%3e%3c/rect%3e%3cpath d='M1660 0L1032.48 0L1660 258.23z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1032.48 0L1660 258.23L1660 441.44000000000005L550.5699999999999 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M550.5699999999999 0L1660 441.44000000000005L1660 753.1700000000001L339.67999999999995 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M339.67999999999984 0L1660 753.1700000000001L1660 801.3800000000001L338.66999999999985 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 963L765.43 963L0 700.3399999999999z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 700.3399999999999L765.43 963L885.63 963L0 631.77z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 631.77L885.63 963L1201.18 963L0 608.17z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 608.17L1201.18 963L1470.33 963L0 549.8399999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1218'%3e%3crect width='1660' height='963' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='10.5%25' y1='-18.09%25' x2='89.5%25' y2='118.09%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1219'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(158%2c 58%2c 0%2c 0.72)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    color: aliceblue;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300rem;
+    background-image: linear-gradient(to right, #ff0909, #2aff09);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1 rem;
+}
+
+#newtask-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    color: rgb(174, 167, 167);
+}
+
+#new-task-submit {
+    color: rgb(203, 37, 92);
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgb(92 11 106), rgb(92 7 103));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.6;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    /*padding: 2rem 1rem;*/
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(24, 24, 24);
+    margin-bottom: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text {
+    color: rgb(124, 127, 127);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    font-weight: 525;
+}
+
+.text:not(:read-only) {
+    color: rgb(237, 122, 14);
+}
+
+.actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.actions button:hover {
+    opacity: 0.8;
+}
+
+.actions button:active {
+    opacity: 0.6;
+}
+
+.edit {
+    background-image: linear-gradient(to right, #f7a313, rgb(59, 180, 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.delete {
+    margin-left: 1rem;
+    background-image: linear-gradient(to right, rgb(86, 38, 38), rgb(188, 60, 99));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.content {
+    flex: 1 1 0%;
+}
